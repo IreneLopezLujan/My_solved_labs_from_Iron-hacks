@@ -20,7 +20,7 @@ class Viking(Soldier):
     #def attack , hereda el ataque de soldado y no se pone porque no varía.
     def receiveDamage(self, damage):
         super().receiveDamage(damage)
-        if self.health >0:
+        if self.health > 0:
             return f"{self.name} has received {damage} points of damage"
         else:
             return f"{self.name} has died in act of combat"
@@ -62,7 +62,7 @@ class War():
         vik=random.choice(self.vikingArmy)
         result=vik.receiveDamage(vik.attack())
         if result=="A Saxon has died in combat":
-            self.Army.remove(sax)
+            self.saxonArmy.remove(sax)
         return result
     def saxonAttack(self):
         sax=random.choice(self.saxonArmy)
